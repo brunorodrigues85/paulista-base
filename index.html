@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br"><head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AGOSTO - PAULISTA DE BASE</title>
 <style>
   * { box-sizing: border-box; }
@@ -9,6 +10,8 @@
     background: linear-gradient(135deg, #7a0019 0%, #b3001b 100%);
     margin: 0;
     padding: 40px 20px;
+    padding-top: max(40px, env(safe-area-inset-top));
+    padding-bottom: max(40px, env(safe-area-inset-bottom));
     min-height: 100vh;
   }
   .container { max-width: 800px; margin: 0 auto; }
@@ -66,6 +69,20 @@
   .details { text-align: right; font-size: 0.9em; color: #555; }
   .cat-tag { display: inline-block; background: #7a0019; color: #fff; border-radius: 20px; padding: 2px 10px; font-size: 0.72em; margin-top: 4px; }
   .footer { text-align: center; color: #fff; opacity: 0.8; font-size: 0.85em; margin-top: 10px; }
+
+  @media (max-width: 480px) {
+    body { padding: 20px 12px; padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+    .header h1 { font-size: 1.5em; }
+    .header p { font-size: 0.95em; }
+    .toggle button { padding: 10px 16px; font-size: 0.9em; }
+    .section { padding: 16px 14px; border-radius: 12px; }
+    .section h2 { font-size: 1.1em; }
+    .card-top { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .details { text-align: left; }
+    .matchup { font-size: 1em; }
+    .fpv-link { padding: 8px 14px; }
+    .day-divider span { font-size: 0.95em; }
+  }
 </style>
 </head>
 <body>
