@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="UTF-8">
+<title>AGOSTO - PAULISTA DE BASE</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #7a0019 0%, #b3001b 100%);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; color: #fff; margin-bottom: 20px; }
+  .header h1 { font-size: 2.2em; margin: 0 0 5px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+  .header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
+
+  .toggle-wrap { display: flex; justify-content: center; margin-bottom: 28px; }
+  .toggle {
+    display: inline-flex;
+    background: rgba(255,255,255,0.15);
+    border-radius: 30px;
+    padding: 4px;
+  }
+  .toggle button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 0.95em;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 26px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .toggle button.active {
+    background: #fff;
+    color: #7a0019;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  .section { background: #fff; border-radius: 14px; padding: 24px 28px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+  .section h2 { color: #7a0019; border-bottom: 3px solid #f0c14b; padding-bottom: 10px; margin-top: 0; font-size: 1.3em; }
+
+  .day-divider {
+    display: flex;
+    align-items: center;
+    color: #7a0019;
+    font-weight: 700;
+    font-size: 1.05em;
+    margin: 22px 0 10px 0;
+  }
+  .day-divider:first-child { margin-top: 0; }
+  .day-divider span { background: #f0c14b; color: #7a0019; padding: 4px 14px; border-radius: 20px; }
+  .day-divider::after { content: ""; flex: 1; height: 2px; background: #f0c14b; margin-left: 10px; }
+
+  .game-card { display: block; background: #fdf6f0; border-left: 5px solid #7a0019; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+  .card-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .fpv-link { display: inline-block; margin-top: 10px; font-size: 0.85em; color: #7a0019; font-weight: 600; text-decoration: none; border: 1px solid #7a0019; padding: 4px 10px; border-radius: 14px; }
+  .fpv-link:hover { background: #7a0019; color: #fff; }
+  .game-card:last-child { margin-bottom: 0; }
+  .matchup { font-size: 1.1em; font-weight: 600; color: #2c2c2c; }
+  .matchup .home { color: #7a0019; font-weight: 700; }
+  .vs { color: #999; font-weight: 400; margin: 0 6px; }
+  .details { text-align: right; font-size: 0.9em; color: #555; }
+  .cat-tag { display: inline-block; background: #7a0019; color: #fff; border-radius: 20px; padding: 2px 10px; font-size: 0.72em; margin-top: 4px; }
+  .footer { text-align: center; color: #fff; opacity: 0.8; font-size: 0.85em; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>🏐 AGOSTO - PAULISTA DE BASE</h1>
+    <p>Jogos em casa (mandante) · Agosto de 2026</p>
+  </div>
+
+  <div class="toggle-wrap">
+    <div class="toggle">
+      <button id="btn-camp" class="active">Por Campeonato</button>
+      <button id="btn-data" class="">Por Data</button>
+    </div>
+  </div>
+
+  <div id="content"><div class="section"><h2>Estadual Sub-19 Masculino</h2><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">JANDIRA</span><span class="vs">x</span>ARUJA VOLEI</div>
+        
+      </div>
+      <div class="details">📅 08/08/2026 · ⏰ 11:00<br>📍 Jandira - Gin. Jardim Brotinho</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=08/08/2026&amp;datfin=08/08/2026&amp;eq=JANDIRA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">ATIBAIA</span><span class="vs">x</span>NAKAGAWA</div>
+        
+      </div>
+      <div class="details">📅 09/08/2026 · ⏰ 16:00<br>📍 Atibaia - Gin. Elefantão</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=09/08/2026&amp;datfin=09/08/2026&amp;eq=ATIBAIA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VOLEI RENATA</span><span class="vs">x</span>VOLEI MAUA</div>
+        
+      </div>
+      <div class="details">📅 11/08/2026 · ⏰ 19:30<br>📍 Campinas - Gin. Taquaral</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=11/08/2026&amp;datfin=11/08/2026&amp;eq=VOLEI%20RENATA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">TIME JUNDIAI</span><span class="vs">x</span>MACKSSUD/NOVO IDEAL/</div>
+        
+      </div>
+      <div class="details">📅 13/08/2026 · ⏰ 19:00<br>📍 Jundiaí - Bolão</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=13/08/2026&amp;datfin=13/08/2026&amp;eq=TIME%20JUNDIAI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">JANDIRA</span><span class="vs">x</span>SÃO CAETANO</div>
+        
+      </div>
+      <div class="details">📅 15/08/2026 · ⏰ 11:00<br>📍 Jandira - Gin. Jardim Brotinho</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=15/08/2026&amp;datfin=15/08/2026&amp;eq=JANDIRA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VOLEI RENATA</span><span class="vs">x</span>EDUCA MANIA PINDA</div>
+        
+      </div>
+      <div class="details">📅 27/08/2026 · ⏰ 20:00<br>📍 Campinas - Gin. Taquaral</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=27/08/2026&amp;datfin=27/08/2026&amp;eq=VOLEI%20RENATA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">TIME JUNDIAI</span><span class="vs">x</span>ATIBAIA</div>
+        
+      </div>
+      <div class="details">📅 28/08/2026 · ⏰ 18:30<br>📍 Jundiaí - Cece Antonio de Lima</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=28/08/2026&amp;datfin=28/08/2026&amp;eq=TIME%20JUNDIAI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div></div><div class="section"><h2>Estadual Sub-19 Feminino</h2><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">ADV/ARTUR NOGUEIRA</span><span class="vs">x</span>NAKAGAWA</div>
+        
+      </div>
+      <div class="details">📅 02/08/2026 · ⏰ 16:00<br>📍 Artur Nogueira - Escola Modelo/ETEC</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=02/08/2026&amp;datfin=02/08/2026&amp;eq=ADV/ARTUR%20NOGUEIRA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">JAGUAR T.C/UNIFAJ</span><span class="vs">x</span>ESPORTE CLUBE PRAIA</div>
+        
+      </div>
+      <div class="details">📅 05/08/2026 · ⏰ 18:00<br>📍 Jaguariúna - Jaguar Tênis Clube</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=05/08/2026&amp;datfin=05/08/2026&amp;eq=JAGUAR%20T.C/UNIFAJ" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VÔLEI ADELBRAS MB5</span><span class="vs">x</span>AD ABCD/DIADEMA</div>
+        
+      </div>
+      <div class="details">📅 07/08/2026 · ⏰ 18:30<br>📍 Vinhedo - Gin. Escola Patriarca</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=07/08/2026&amp;datfin=07/08/2026&amp;eq=V%C3%94LEI%20ADELBRAS%20MB5" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">ADV/ARTUR NOGUEIRA</span><span class="vs">x</span>ATIBAIA</div>
+        
+      </div>
+      <div class="details">📅 14/08/2026 · ⏰ 18:00<br>📍 Artur Nogueira - Escola Modelo/ETEC</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=14/08/2026&amp;datfin=14/08/2026&amp;eq=ADV/ARTUR%20NOGUEIRA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">TIME JUNDIAI</span><span class="vs">x</span>SESI BAURU</div>
+        
+      </div>
+      <div class="details">📅 14/08/2026 · ⏰ 19:00<br>📍 Jundiaí - Bolão</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=14/08/2026&amp;datfin=14/08/2026&amp;eq=TIME%20JUNDIAI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">JAGUAR T.C/UNIFAJ</span><span class="vs">x</span>NAKAGAWA</div>
+        
+      </div>
+      <div class="details">📅 18/08/2026 · ⏰ 19:00<br>📍 Jaguariúna - Jaguar Tênis Clube</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=18/08/2026&amp;datfin=18/08/2026&amp;eq=JAGUAR%20T.C/UNIFAJ" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">AMERICANA VOLEI</span><span class="vs">x</span>AD ABCD/DIADEMA</div>
+        
+      </div>
+      <div class="details">📅 22/08/2026 · ⏰ 17:00<br>📍 Americana - Gin.Esp.Luiz Meneguel</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=22/08/2026&amp;datfin=22/08/2026&amp;eq=AMERICANA%20VOLEI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">TIME JUNDIAI</span><span class="vs">x</span>SANTO ANDRÉ</div>
+        
+      </div>
+      <div class="details">📅 28/08/2026 · ⏰ 18:00<br>📍 Jundiaí - Cece Antonio de Lima</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=28/08/2026&amp;datfin=28/08/2026&amp;eq=TIME%20JUNDIAI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">ADV/ARTUR NOGUEIRA</span><span class="vs">x</span>OSASCO</div>
+        
+      </div>
+      <div class="details">📅 28/08/2026 · ⏰ 18:30<br>📍 Artur Nogueira - Escola Modelo/ETEC</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=28/08/2026&amp;datfin=28/08/2026&amp;eq=ADV/ARTUR%20NOGUEIRA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div></div><div class="section"><h2>Estadual Sub-21 Masculino</h2><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VOLEI RENATA</span><span class="vs">x</span>DIVERTERE/FAE/OSASCO</div>
+        
+      </div>
+      <div class="details">📅 06/08/2026 · ⏰ 20:00<br>📍 Campinas - Gin. Taquaral</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=06/08/2026&amp;datfin=06/08/2026&amp;eq=VOLEI%20RENATA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VOLEI RENATA</span><span class="vs">x</span>BEBEDOURO</div>
+        
+      </div>
+      <div class="details">📅 13/08/2026 · ⏰ 19:30<br>📍 Campinas - Gin. Taquaral</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=13/08/2026&amp;datfin=13/08/2026&amp;eq=VOLEI%20RENATA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">DIVERTERE/FAE/OSASCO</span><span class="vs">x</span>SESI BAURU</div>
+        
+      </div>
+      <div class="details">📅 14/08/2026 · ⏰ 19:30<br>📍 Osasco - Cidade do Vôlei</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=14/08/2026&amp;datfin=14/08/2026&amp;eq=DIVERTERE/FAE/OSASCO" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">VOLEI RENATA</span><span class="vs">x</span>VOLEI MANIA ITAQUÁ</div>
+        
+      </div>
+      <div class="details">📅 18/08/2026 · ⏰ 18:00<br>📍 Campinas - Gin. Taquaral</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=18/08/2026&amp;datfin=18/08/2026&amp;eq=VOLEI%20RENATA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div></div><div class="section"><h2>Estadual Sub-21 Feminino</h2><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">RENASCE SOROCABA</span><span class="vs">x</span>EC PINHEIROS</div>
+        
+      </div>
+      <div class="details">📅 05/08/2026 · ⏰ 19:00<br>📍 Sorocaba - SESI</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=05/08/2026&amp;datfin=05/08/2026&amp;eq=RENASCE%20SOROCABA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">PAINEIRAS</span><span class="vs">x</span>REALIZAR/FUPES/INTER</div>
+        
+      </div>
+      <div class="details">📅 07/08/2026 · ⏰ 19:00<br>📍 Paineiras</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=07/08/2026&amp;datfin=07/08/2026&amp;eq=PAINEIRAS" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">OSASCO</span><span class="vs">x</span>SESI BAURU</div>
+        
+      </div>
+      <div class="details">📅 07/08/2026 · ⏰ 20:00<br>📍 Osasco - Gin.Mun.Prof. Jose Liberatti</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=07/08/2026&amp;datfin=07/08/2026&amp;eq=OSASCO" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">OSASCO</span><span class="vs">x</span>PAINEIRAS</div>
+        
+      </div>
+      <div class="details">📅 10/08/2026 · ⏰ 20:00<br>📍 Osasco - Gin.Mun.Prof. Jose Liberatti</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=10/08/2026&amp;datfin=10/08/2026&amp;eq=OSASCO" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">PAULISTANO BARUERI</span><span class="vs">x</span>RENASCE SOROCABA</div>
+        
+      </div>
+      <div class="details">📅 11/08/2026 · ⏰ 18:00<br>📍 Barueri - Sportville</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=11/08/2026&amp;datfin=11/08/2026&amp;eq=PAULISTANO%20BARUERI" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">RENASCE SOROCABA</span><span class="vs">x</span>PAINEIRAS</div>
+        
+      </div>
+      <div class="details">📅 19/08/2026 · ⏰ 18:00<br>📍 Sorocaba - SESI</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=19/08/2026&amp;datfin=19/08/2026&amp;eq=RENASCE%20SOROCABA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">OSASCO</span><span class="vs">x</span>RENASCE SOROCABA</div>
+        
+      </div>
+      <div class="details">📅 24/08/2026 · ⏰ 20:00<br>📍 Osasco - Gin.Mun.Prof. Jose Liberatti</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=24/08/2026&amp;datfin=24/08/2026&amp;eq=OSASCO" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">PAINEIRAS</span><span class="vs">x</span>PAULISTANO BARUERI</div>
+        
+      </div>
+      <div class="details">📅 28/08/2026 · ⏰ 19:00<br>📍 Paineiras</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=28/08/2026&amp;datfin=28/08/2026&amp;eq=PAINEIRAS" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div><div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">RENASCE SOROCABA</span><span class="vs">x</span>REALIZAR/FUPES/INTER</div>
+        
+      </div>
+      <div class="details">📅 31/08/2026 · ⏰ 19:00<br>📍 Sorocaba - SESI</div>
+    </div>
+    <a href="https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&amp;camp=&amp;naipe=&amp;datini=31/08/2026&amp;datfin=31/08/2026&amp;eq=RENASCE%20SOROCABA" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div></div></div>
+
+  <div class="footer">Dados extraídos do Calendário FPV · www2.fpv.com.br</div>
+</div>
+
+<script>
+const games = [
+  {camp:"Estadual Sub-19 Masculino", data:"08/08/2026", hora:"11:00", home:"JANDIRA", away:"ARUJA VOLEI", local:"Jandira - Gin. Jardim Brotinho"},
+  {camp:"Estadual Sub-19 Masculino", data:"09/08/2026", hora:"16:00", home:"ATIBAIA", away:"NAKAGAWA", local:"Atibaia - Gin. Elefantão"},
+  {camp:"Estadual Sub-19 Masculino", data:"11/08/2026", hora:"19:30", home:"VOLEI RENATA", away:"VOLEI MAUA", local:"Campinas - Gin. Taquaral"},
+  {camp:"Estadual Sub-19 Masculino", data:"13/08/2026", hora:"19:00", home:"TIME JUNDIAI", away:"MACKSSUD/NOVO IDEAL/", local:"Jundiaí - Bolão"},
+  {camp:"Estadual Sub-19 Masculino", data:"15/08/2026", hora:"11:00", home:"JANDIRA", away:"SÃO CAETANO", local:"Jandira - Gin. Jardim Brotinho"},
+  {camp:"Estadual Sub-19 Masculino", data:"27/08/2026", hora:"20:00", home:"VOLEI RENATA", away:"EDUCA MANIA PINDA", local:"Campinas - Gin. Taquaral"},
+  {camp:"Estadual Sub-19 Masculino", data:"28/08/2026", hora:"18:30", home:"TIME JUNDIAI", away:"ATIBAIA", local:"Jundiaí - Cece Antonio de Lima"},
+
+  {camp:"Estadual Sub-19 Feminino", data:"02/08/2026", hora:"16:00", home:"ADV/ARTUR NOGUEIRA", away:"NAKAGAWA", local:"Artur Nogueira - Escola Modelo/ETEC"},
+  {camp:"Estadual Sub-19 Feminino", data:"05/08/2026", hora:"18:00", home:"JAGUAR T.C/UNIFAJ", away:"ESPORTE CLUBE PRAIA", local:"Jaguariúna - Jaguar Tênis Clube"},
+  {camp:"Estadual Sub-19 Feminino", data:"07/08/2026", hora:"18:30", home:"VÔLEI ADELBRAS MB5", away:"AD ABCD/DIADEMA", local:"Vinhedo - Gin. Escola Patriarca"},
+  {camp:"Estadual Sub-19 Feminino", data:"14/08/2026", hora:"18:00", home:"ADV/ARTUR NOGUEIRA", away:"ATIBAIA", local:"Artur Nogueira - Escola Modelo/ETEC"},
+  {camp:"Estadual Sub-19 Feminino", data:"14/08/2026", hora:"19:00", home:"TIME JUNDIAI", away:"SESI BAURU", local:"Jundiaí - Bolão"},
+  {camp:"Estadual Sub-19 Feminino", data:"18/08/2026", hora:"19:00", home:"JAGUAR T.C/UNIFAJ", away:"NAKAGAWA", local:"Jaguariúna - Jaguar Tênis Clube"},
+  {camp:"Estadual Sub-19 Feminino", data:"22/08/2026", hora:"17:00", home:"AMERICANA VOLEI", away:"AD ABCD/DIADEMA", local:"Americana - Gin.Esp.Luiz Meneguel"},
+  {camp:"Estadual Sub-19 Feminino", data:"28/08/2026", hora:"18:00", home:"TIME JUNDIAI", away:"SANTO ANDRÉ", local:"Jundiaí - Cece Antonio de Lima"},
+  {camp:"Estadual Sub-19 Feminino", data:"28/08/2026", hora:"18:30", home:"ADV/ARTUR NOGUEIRA", away:"OSASCO", local:"Artur Nogueira - Escola Modelo/ETEC"},
+
+  {camp:"Estadual Sub-21 Masculino", data:"06/08/2026", hora:"20:00", home:"VOLEI RENATA", away:"DIVERTERE/FAE/OSASCO", local:"Campinas - Gin. Taquaral"},
+  {camp:"Estadual Sub-21 Masculino", data:"13/08/2026", hora:"19:30", home:"VOLEI RENATA", away:"BEBEDOURO", local:"Campinas - Gin. Taquaral"},
+  {camp:"Estadual Sub-21 Masculino", data:"14/08/2026", hora:"19:30", home:"DIVERTERE/FAE/OSASCO", away:"SESI BAURU", local:"Osasco - Cidade do Vôlei"},
+  {camp:"Estadual Sub-21 Masculino", data:"18/08/2026", hora:"18:00", home:"VOLEI RENATA", away:"VOLEI MANIA ITAQUÁ", local:"Campinas - Gin. Taquaral"},
+
+  {camp:"Estadual Sub-21 Feminino", data:"05/08/2026", hora:"19:00", home:"RENASCE SOROCABA", away:"EC PINHEIROS", local:"Sorocaba - SESI"},
+  {camp:"Estadual Sub-21 Feminino", data:"07/08/2026", hora:"19:00", home:"PAINEIRAS", away:"REALIZAR/FUPES/INTER", local:"Paineiras"},
+  {camp:"Estadual Sub-21 Feminino", data:"07/08/2026", hora:"20:00", home:"OSASCO", away:"SESI BAURU", local:"Osasco - Gin.Mun.Prof. Jose Liberatti"},
+  {camp:"Estadual Sub-21 Feminino", data:"10/08/2026", hora:"20:00", home:"OSASCO", away:"PAINEIRAS", local:"Osasco - Gin.Mun.Prof. Jose Liberatti"},
+  {camp:"Estadual Sub-21 Feminino", data:"11/08/2026", hora:"18:00", home:"PAULISTANO BARUERI", away:"RENASCE SOROCABA", local:"Barueri - Sportville"},
+  {camp:"Estadual Sub-21 Feminino", data:"19/08/2026", hora:"18:00", home:"RENASCE SOROCABA", away:"PAINEIRAS", local:"Sorocaba - SESI"},
+  {camp:"Estadual Sub-21 Feminino", data:"24/08/2026", hora:"20:00", home:"OSASCO", away:"RENASCE SOROCABA", local:"Osasco - Gin.Mun.Prof. Jose Liberatti"},
+  {camp:"Estadual Sub-21 Feminino", data:"28/08/2026", hora:"19:00", home:"PAINEIRAS", away:"PAULISTANO BARUERI", local:"Paineiras"},
+  {camp:"Estadual Sub-21 Feminino", data:"31/08/2026", hora:"19:00", home:"RENASCE SOROCABA", away:"REALIZAR/FUPES/INTER", local:"Sorocaba - SESI"}
+];
+
+const campOrder = ["Estadual Sub-19 Masculino","Estadual Sub-19 Feminino","Estadual Sub-21 Masculino","Estadual Sub-21 Feminino"];
+
+function toDateObj(d, h){
+  const [dd,mm,yyyy] = d.split('/');
+  const [hh,mi] = h.split(':');
+  return new Date(yyyy, mm-1, dd, hh, mi);
+}
+
+function gameCardHtml(g, showCat){
+  const encTeam = encodeURIComponent(g.home).replace(/%2F/g, '/');
+  const fpvUrl = 'https://www.fpv.com.br/2018/bd/vq_calend_iframe.asp?cat=&camp=&naipe=&datini=' + g.data + '&datfin=' + g.data + '&eq=' + encTeam;
+  return `<div class="game-card">
+    <div class="card-top">
+      <div>
+        <div class="matchup"><span class="home">${g.home}</span><span class="vs">x</span>${g.away}</div>
+        ${showCat ? '<span class="cat-tag">'+g.camp+'</span>' : ''}
+      </div>
+      <div class="details">📅 ${g.data} · ⏰ ${g.hora}<br>📍 ${g.local}</div>
+    </div>
+    <a href="${fpvUrl}" class="fpv-link" target="_blank" rel="noopener noreferrer">🔗 Ver no Calendário FPV</a>
+  </div>`;
+}
+
+function renderByCampeonato(){
+  let out = '';
+  campOrder.forEach(camp => {
+    const list = games.filter(g => g.camp === camp).slice().sort((a,b)=> toDateObj(a.data,a.hora) - toDateObj(b.data,b.hora));
+    out += '<div class="section"><h2>'+camp+'</h2>';
+    list.forEach(g => out += gameCardHtml(g, false));
+    out += '</div>';
+  });
+  return out;
+}
+
+function renderByData(){
+  const sorted = games.slice().sort((a,b)=> toDateObj(a.data,a.hora) - toDateObj(b.data,b.hora));
+  let out = '<div class="section">';
+  let lastDate = null;
+  sorted.forEach(g => {
+    if (g.data !== lastDate) {
+      out += '<div class="day-divider"><span>'+g.data+'</span></div>';
+      lastDate = g.data;
+    }
+    out += gameCardHtml(g, true);
+  });
+  out += '</div>';
+  return out;
+}
+
+function setView(view){
+  const content = document.getElementById('content');
+  const btnCamp = document.getElementById('btn-camp');
+  const btnData = document.getElementById('btn-data');
+  if (view === 'camp') {
+    content.innerHTML = renderByCampeonato();
+    btnCamp.classList.add('active');
+    btnData.classList.remove('active');
+  } else {
+    content.innerHTML = renderByData();
+    btnData.classList.add('active');
+    btnCamp.classList.remove('active');
+  }
+}
+
+document.getElementById('btn-camp').addEventListener('click', () => setView('camp'));
+document.getElementById('btn-data').addEventListener('click', () => setView('data'));
+
+setView('camp');
+</script>
+
+</body></html>
