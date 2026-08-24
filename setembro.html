@@ -26,30 +26,6 @@ min-height: 100vh;
 .header h1 { font-size: 2.2em; margin: 0 0 5px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
 .header p { font-size: 1.1em; opacity: 0.9; margin: 0; }
 
-.toggle-wrap { display: flex; justify-content: center; margin-bottom: 28px; }
-.toggle {
-display: inline-flex;
-background: rgba(255,255,255,0.15);
-border-radius: 30px;
-padding: 4px;
-}
-.toggle button {
-border: none;
-background: transparent;
-color: #fff;
-font-size: 0.95em;
-font-weight: 600;
-padding: 10px 22px;
-border-radius: 26px;
-cursor: pointer;
-transition: all 0.2s ease;
-}
-.toggle button.active {
-background: #fff;
-color: #7a0019;
-box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-}
-
 .section { background: #fff; border-radius: 14px; padding: 24px 28px; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 .section h2 { color: #7a0019; border-bottom: 3px solid #f0c14b; padding-bottom: 10px; margin-top: 0; font-size: 1.3em; }
 
@@ -81,7 +57,6 @@ margin: 22px 0 10px 0;
 body { padding: 20px 12px; padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
 .header h1 { font-size: 1.5em; }
 .header p { font-size: 0.95em; }
-.toggle button { padding: 10px 16px; font-size: 0.9em; }
 .section { padding: 16px 14px; border-radius: 12px; }
 .section h2 { font-size: 1.1em; }
 .card-top { flex-direction: column; align-items: flex-start; gap: 6px; }
@@ -98,13 +73,6 @@ body { padding: 20px 12px; padding-top: max(20px, env(safe-area-inset-top)); pad
 <h1>🏐 SETEMBRO - PAULISTA DE BASE</h1>
 <p>ÚLTIMA ATUALIZAÇÃO 24/08/2026 - 19:47</p>
 </div>
-<div class="toggle-wrap">
-<div class="toggle">
-<button id="btn-camp" class="active">Por Campeonato</button>
-<button id="btn-data" class="">Por Data</button>
-</div>
-</div>
-
 <div id="content"></div>
 
 <div class="footer">Dados extraídos do Calendário FPV · www2.fpv.com.br</div>
@@ -144,8 +112,6 @@ const games = [
 {camp:"Estadual Sub-21 Feminino", data:"01/09/2026", hora:"20:00", home:"OSASCO", away:"PAULISTANO BARUERI", local:"Osasco - Gin.Mun.Prof. Jose Liberatti"}
 ];
 
-const campOrder = ["Estadual Sub-19 Masculino","Estadual Sub-19 Feminino","Estadual Sub-21 Masculino","Estadual Sub-21 Feminino"];
-
 function toDateObj(d, h){
 const [dd,mm,yyyy] = d.split('/');
 const [hh,mi] = h.split(':');
@@ -167,17 +133,6 @@ ${showCat ? '<span class="cat-tag">'+g.camp+'</span>' : ''}
 </div>`;
 }
 
-function renderByCampeonato(){
-let out = '';
-campOrder.forEach(camp => {
-const list = games.filter(g => g.camp === camp).slice().sort((a,b)=> toDateObj(a.data,a.hora) - toDateObj(b.data,b.hora));
-out += '<div class="section"><h2>'+camp+'</h2>';
-list.forEach(g => out += gameCardHtml(g, false));
-out += '</div>';
-});
-return out;
-}
-
 function renderByData(){
 const sorted = games.slice().sort((a,b)=> toDateObj(a.data,a.hora) - toDateObj(b.data,b.hora));
 let out = '<div class="section">';
@@ -193,25 +148,7 @@ out += '</div>';
 return out;
 }
 
-function setView(view){
-const content = document.getElementById('content');
-const btnCamp = document.getElementById('btn-camp');
-const btnData = document.getElementById('btn-data');
-if (view === 'camp') {
-content.innerHTML = renderByCampeonato();
-btnCamp.classList.add('active');
-btnData.classList.remove('active');
-} else {
-content.innerHTML = renderByData();
-btnData.classList.add('active');
-btnCamp.classList.remove('active');
-}
-}
-
-document.getElementById('btn-camp').addEventListener('click', () => setView('camp'));
-document.getElementById('btn-data').addEventListener('click', () => setView('data'));
-
-setView('camp');
+document.getElementById('content').innerHTML = renderByData();
 </script>
 
 </body></html>
